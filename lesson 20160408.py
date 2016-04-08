@@ -64,3 +64,51 @@ while answer != 1:
 print(" GAME OVER")
 
 
+
+##### Exercise 3
+
+import random
+
+guess = random.randint(1,10)
+answer = 0
+low_int = 1
+up_int = 10
+
+
+
+while answer != 1:
+    try:
+        
+        print("Is that number equal", str(guess), "?")
+        print("Choose one of three variants",
+              "\n1. Your guess is right.",
+              "\n2. It's bigger.",
+              "\n3. It's less.",
+              "\nPress one of three buttons 1, 2, 3.")
+        answer = int(input())
+
+    except ValueError:
+          print("You need to input digits")
+          continue
+    else:
+              
+        if answer == 1:
+                print("I'm the winer now! What the smartass I am! =)")
+                break
+        if answer == 2:
+                guess = random.randint(low_int + 1, up_int)
+                continue
+        if answer == 3:
+                guess = random.randint(low_int, up_int - 1)
+                continue
+        if guess > 10 or guess < 0:
+                print("you are lying... Your head will collapse")
+                break
+                
+        else:
+                print("You need to input only numbers 1, 2, 3.")
+                continue
+print(" GAME OVER")
+
+
+
