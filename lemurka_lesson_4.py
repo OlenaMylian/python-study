@@ -77,15 +77,3 @@ l[counter_min], l[counter_max] = l[counter_max], l[counter_min]
 print(l)
                 
 
-
-counter_min = 0
-for x in l:
-    
-        if x == a_min:
-                break
-        
-counter_min += 1
-for x in l:
-    
-        if x == a_min:
-                break
