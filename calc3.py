@@ -7,6 +7,12 @@ def calc():
     user_input_b = 0
     last_dig = 0
     valid_chr = ["+", "-", "*", "/", "exit", "=", "_", "help", "c"]
+    print("\nGreetings on Python-calc!"
+          "\nClosed Alpha test"
+          "\nSoftware version: 0.0.5"
+          "\n\nList of available actions(print in 'op?'): ")
+    print(valid_chr)
+
     ## Cheking for digits in first number
     user_input_a = int_check(user_input_a, "first?")
     while True:
