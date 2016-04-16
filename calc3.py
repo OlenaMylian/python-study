@@ -6,7 +6,7 @@ def calc():
     user_input_a = 0
     user_input_b = 0
     last_dig = 0
-    valid_chr = ["+", "-", "*", "/", "exit", "=", "_"]
+    valid_chr = ["+", "-", "*", "/", "exit", "=", "_", "help", "c"]
     ## Cheking for digits in first number
     user_input_a = int_check(user_input_a, "first?")
     while True:
@@ -14,7 +14,14 @@ def calc():
         user_input_op = valid_check(valid_chr)
         if user_input_op == "=":
                 print(user_input_a)
-                continue
+        elif user_input_op == "help":
+            print("List of available actions: ")
+            print(valid_chr)
+        elif user_input_op == "c":
+            user_input_a = 0
+            user_input_b = 0
+            print(user_input_a)
+            user_input_a = int_check(user_input_a, "first?")
         else:
             ## Takes input from user for new number, if operant == "_" - it's return
             ## previous number that was input by user.
